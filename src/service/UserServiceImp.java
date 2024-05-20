@@ -15,7 +15,7 @@ public class UserServiceImp implements UserService{
     @Override
     public User findUserById(Integer id) throws UserNotFoundException{
         var user = UserRepository.getAllUser().stream()
-                .filter(e->e.getId().equals(id)).toList();
+                .filter(item->item.getId().equals(id)).toList();
         if(user.isEmpty()){
             throw new UserNotFoundException("User not found with id: " + id);
         }
