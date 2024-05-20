@@ -6,6 +6,6 @@ import model.User;
 import java.util.List;
 
 public interface UserService {
-    List<User> getAllUser();
+    List<User> getAllUsers();
     User findUserById(Integer id) throws UserNotFoundException;
 }
